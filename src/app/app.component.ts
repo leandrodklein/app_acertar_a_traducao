@@ -5,6 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app_acertar_a_traducao';
+
+  public jogoEmAndamento: boolean = true
+  public tipoEncerramento!: string
+
+  public encerrarJogo(tipo: string): void {    
+    this.jogoEmAndamento = false
+    this.tipoEncerramento = tipo
+  }  
+
 }
